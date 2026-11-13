@@ -1,4 +1,6 @@
-# Test It - Prêt de livres
+## RAFAEL VAGNER
+
+Test It - Prêt de livres
 
 API REST Spring Boot (Java 25) de prêt de livres pour une bibliothèque.
 **Le code est fourni : votre travail est d'écrire les tests, ce sont eux qui vous diront si tout va bien.**
