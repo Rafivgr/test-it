@@ -11,8 +11,8 @@ import java.util.List;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
-
-    @Query("SELECT b FROM Book b WHERE b.borrower.id = :memberId OR b.status = :status")
+    //On met un AND à la place du OR original
+    @Query("SELECT b FROM Book b WHERE b.borrower.id = :memberId AND b.status = :status")
     List<Book> findByMemberAndStatus(@Param("memberId") Long memberId, @Param("status") Status status);
 
     List<Book> findByBorrowerId(Long memberId);

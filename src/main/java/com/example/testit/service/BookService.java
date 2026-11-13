@@ -67,6 +67,7 @@ public class BookService {
         book.setStatus(Status.EMPRUNTE);
         book.setBorrower(member);
         Book saved = bookRepository.save(book);
+        //Ajoute la ligne pour envoyer un mail lorsque un livre est emprunté
         mailService.sendMail(member, "Livre emprunté ", "Voici votre livre '" + book.getTitle() + "'.");  
         return saved;
     }
